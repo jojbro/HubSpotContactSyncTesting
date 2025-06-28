@@ -13,7 +13,7 @@ This Python script uses the HubSpot API to:
 - `python-dotenv` (if using `.env` for API tokens) `pip install requests`
 
 ## Limitations
-- Limit of 10 contacts for GET request
+- Limit of 10 contacts for the GET request
 
 ## Setup
 
