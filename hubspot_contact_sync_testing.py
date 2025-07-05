@@ -3,9 +3,7 @@ import json
 from dotenv import load_dotenv # This reads the .env file and imports the libraries to use later in this file
 import os
 
-def main():
-    base_url = "https://api.hubapi.com"
-    
+def main(): 
     load_dotenv()  # Load environment variables
 
     access_token_source = os.getenv("access_token_source")
@@ -14,7 +12,7 @@ def main():
      # Step 1: GET contacts from Source portal
      
      #Where the request is sent
-    get_url = f"{base_url}/crm/v3/objects/contacts?limit=10"
+    get_url = f"https://api.hubapi.com/crm/v3/objects/contacts?limit=10"
 
     #info used by the script to access the API
     get_headers = {
@@ -35,7 +33,7 @@ def main():
 
         # Step 2: POST contacts to Destination portal
         # Wheret he request is sent
-        post_url = f"{base_url}/crm/v3/objects/contacts"
+        post_url = f"https://api.hubapi.com/crm/v3/objects/contacts"
         # info used by the script to access the API
         post_headers = {
         'Authorization': f'Bearer {access_token_destination}',
